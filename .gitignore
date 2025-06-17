@@ -15,7 +15,7 @@ msedgedriver.exe
 .vscode/
 
 # === Excel files / Local data ===
-#*.xlsx
+*.xlsx
 
 # === Config files (if they contain machine-specific or sensitive data) ===
 config/*.config
