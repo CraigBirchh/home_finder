@@ -1,0 +1,35 @@
+# === Python-related ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# === Jupyter/IPython Notebooks ===
+.ipynb_checkpoints/
+
+# === Edge WebDriver ===
+msedgedriver.exe
+
+# === VSCode settings ===
+.vscode/
+
+# === Excel files / Local data ===
+*.xlsx
+
+# === Config files (if they contain machine-specific or sensitive data) ===
+config/*.config
+
+# === Log files / temporary files ===
+*.log
+*.tmp
+*.bak
+
+# === System files ===
+.DS_Store
+Thumbs.db
+
+# === Virtual environments (add if you use one) ===
+env/
+venv/
+ENV/
