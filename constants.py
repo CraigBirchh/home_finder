@@ -13,7 +13,7 @@ class Drivers(Enum):
 
 @unique
 class ApiKeys(Enum):
-    GOOGLEMAPS = "AIzaSyDXwADkH7O9iXuKNOYkWsZTdN-1iI3LwHQ"
+    GOOGLEMAPS = "ContentBlocked"
 
 @unique
 class Headings(Enum):
