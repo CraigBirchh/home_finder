@@ -1,7 +1,7 @@
 from copy import deepcopy
 import json
 from constants import Configs, LocationConfigKeys, FileConfigKeys, Locations
-from rightmove import Rightmove
+from rightmove_api.rightmove import Rightmove
 from google_maps import GoogleMaps
 from property_organiser import PropertyOrganiser
 
@@ -21,7 +21,7 @@ class app_runner:
                            "B) Full Search (New Area),\n"
                            "C) Link Search \n"
                            "E) Review List,\n"
-                           "F) Create CSV for My Maps,\n "
+                           "F) Create CSV for My Maps,\n"
                            "H) Quit\n"
                            "Enter a command: ").upper()
 
@@ -51,9 +51,9 @@ class app_runner:
 
     def full_search(self, location):
             self.organiser.add_from_api(self.rightmove.get_properties(self.location_config, location))
-            self.organiser.add_from_scraper(self.rightmove.scrape_properties(self.location_config,
-                                            self.organiser.df["URL"]))
-            self.organiser.delete_from_scraper(self.rightmove.refine_properties(self.location_config))
+            self.organiser.add_from_scraper(self.rightmove.scrape_properties(self.organiser.df["URL"]))
+            self.organiser.delete_from_scraper(self.rightmove.refine_properties(self.location_config),
+                                               self.organiser.df)
             self.organiser.add_from_scraper(self.googlemaps.get_distances(self.organiser.df["URL"],
                                             self.organiser.df["Address"], Locations.WORK_LOCATION.value))
             self.organiser.convert_to_csv(self.file_config[FileConfigKeys.MY_MAPS.value])

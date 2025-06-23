@@ -57,8 +57,9 @@ class RightmoveLinkScraper:
         self.soup = self._get_soup(url)
 
         row = {}
+        row["URL"] = url
         for key, data in scrape_data.items():
-            row[key] = self._scrape_data(self, key, data)
+            row[key] = self._scrape_data(key, data)
 
         return row
 

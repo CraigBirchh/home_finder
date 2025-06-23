@@ -22,7 +22,7 @@ class PropertyOrganiser:
         self.df.to_excel(self.current_search, index=False)
 
     def add_from_scraper(self, data_frame):
-        self.df = pd.merge(self.df, data_frame, on="link", how="left")
+        self.df = pd.merge(self.df, data_frame, on="URL", how="left")
         self.df.to_excel(self.current_search, index=False)
 
     def delete_from_scraper(self, rows_to_delete):

@@ -17,9 +17,6 @@ msedgedriver.exe
 # === Excel files / Local data ===
 *.xlsx
 
-# === Config files (if they contain machine-specific or sensitive data) ===
-config/*.config
-
 # === Log files / temporary files ===
 *.log
 *.tmp

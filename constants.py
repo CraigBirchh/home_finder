@@ -17,9 +17,11 @@ class ApiKeys(Enum):
 
 @unique
 class Headings(Enum):
-    DATAFRAME = ["Address", "URL", "Price", "Bedrooms", "Added", "Property Type"
+    DATAFRAME = ["Address", "URL", "Price", "Bedrooms", "Added", "Property Type",
                  "Let Available Date", "Deposit", "Min. Tenancy", "Furnish Type",
                  "Bathrooms", "Size", "Distance", "Driving", "Public Transport", "Cycling", "Walking"]
+
+    API = ["Address", "URL", "Price", "Bedrooms", "Added", "Property Type"]
 
     SITE_SCRAPE = {"Address": 'streetAddress',
                    "Price": 'pcm',

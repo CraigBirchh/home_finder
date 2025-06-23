@@ -1,6 +1,6 @@
-from rightmove_data import RightmoveData
-from rightmove_url_retriever import RightmoveUrlRetriever
-from rightmove_link_scraper import RightmoveLinkScraper
+from rightmove_api.rightmove_data import RightmoveData
+from rightmove_api.rightmove_url_retriever import RightmoveUrlRetriever
+from rightmove_api.rightmove_link_scraper import RightmoveLinkScraper
 from constants import LocationConfigKeys
 
 class Rightmove():

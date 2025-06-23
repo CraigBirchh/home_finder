@@ -201,12 +201,12 @@ class RightmoveData:
         data = data + [floorplan_urls] if get_floorplans else data
         temp_df = pd.DataFrame(data)
         temp_df = temp_df.transpose()
-        columns = Headings.DATAFRAME.value
+        columns = Headings.API.value
         columns = columns + ["floorplan_url"] if get_floorplans else columns
         temp_df.columns = columns
 
         # Drop empty rows which come from placeholders in the html:
-        temp_df = temp_df[temp_df["Title"].notnull()]
+        temp_df = temp_df[temp_df["Address"].notnull()]
 
         return temp_df
 
